@@ -13,13 +13,23 @@ export class ToevoegenComponent implements OnInit {
     geboortedatum: new FormControl(""),
     studierichting: new FormControl("")
   });
+
+  personen;
   constructor(private ps: PersonenService) {}
 
   ngOnInit() {}
 
   addPersonen() {
+    /*this.ps
+      .zoek(this.profileForm.value)
+      .then(json => (this.personen = json))
+      .then(result => {
+        if (this.personen == null) {
+          this.ps.addPersonen(this.profileForm.value);
+          console.log("toegevoegd!");
+        }
+      });*/
     this.ps.addPersonen(this.profileForm.value);
-    console.log(this.profileForm.value);
-    console.log("Toegevoegd!");
+    console.log(this.personen);
   }
 }
