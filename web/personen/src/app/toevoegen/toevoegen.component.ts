@@ -21,10 +21,8 @@ export class ToevoegenComponent implements OnInit {
 
   addPersonen() {
     /*this.ps
-      .zoek(this.profileForm.value)
-      .then(json => (this.personen = json))
-      .then(result => {
-        if (this.personen == null) {
+      .zoek(this.profileForm.value).then(result => {
+        if (!result) {
           this.ps.addPersonen(this.profileForm.value);
           console.log("toegevoegd!");
         }
