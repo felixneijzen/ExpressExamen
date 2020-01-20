@@ -1,0 +1,12 @@
+<p>zoeken works!</p>
+<label>
+  Naam:
+  <input type="text" [formControl]="naam" />
+</label>
+<p>
+  <button (click)="zoekOpNaam()">Zoek op naam</button>
+</p>
+<br />
+<ul *ngFor="let persoon of personen">
+  <li>{{ persoon.naam }} - {{ persoon.geboortedatum }}</li>
+</ul>

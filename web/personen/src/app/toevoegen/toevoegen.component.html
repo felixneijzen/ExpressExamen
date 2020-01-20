@@ -1,0 +1,21 @@
+<p>toevoegen works!</p>
+<form [formGroup]="profileForm">
+  <label>
+    Naam:
+    <input type="text" formControlName="naam" />
+  </label>
+
+  <label>
+    Geboortedatum:
+    <input type="date" formControlName="geboortedatum" />
+  </label>
+
+  <label>
+    Studierichting:
+    <input type="text" formControlName="studierichting" />
+  </label>
+
+  <p>
+    <button (click)="addPersonen()">Voeg toe</button>
+  </p>
+</form>
